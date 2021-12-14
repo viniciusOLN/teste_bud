@@ -1,6 +1,6 @@
 # Processo Seletivo Bud - Conhecimentos Técnicos Básicos
 
-**Questão 01 -**Crie uma função que recebe um número qualquer e encontra o maior número formado por dígitos consecutivos naquele número.
+*Questão 01 -*Crie uma função que recebe um número qualquer e encontra o maior número formado por dígitos consecutivos naquele número.
 
 Exemplos de entrada e saída da função:
 
