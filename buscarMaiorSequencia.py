@@ -27,6 +27,7 @@ def recuperarSequencias(sequencia):
             else:
                 menorSeq.append(str(sequencia[i]))
                 menorSeq.append(str(sequencia[i + 1]))
+                maiorSeq.append(menorSeq)
             i = i + 2
         elif sequencia[i] == sequencia[i + 1] - 1 or sequencia[i] - 1 == sequencia[i - 1]: 
             if len(menorSeq) > 0:
@@ -44,10 +45,7 @@ def recuperarSequencias(sequencia):
                 maiorSeq.append(menorSeq)
                 menorSeq = list()
                 menorSeq.append(str(sequencia[i]))                                   
-            i = i + 1   
-    if len(maiorSeq) == 0:
-        maiorSeq.append(menorSeq)   
-              
+            i = i + 1                    
     return transformarString(maiorSeq)
 
 def maiorSequencia(sequencia):
