@@ -1,12 +1,12 @@
 #retorna uma lista formatada com strings
-def transformarString(lista):
-    listaFormatada = list()
-    for item in lista:        
-            listaFormatada.append(''.join(item))
-    return listaFormatada
+def transformString(sequence):
+    listFinal = list()
+    for item in sequence:        
+            listFinal.append(''.join(item))
+    return listFinal
 
 #função responsável por recuperar todas as sequências do número passado por parâmetro
-def recuperarsequences(sequence):
+def getSequences(sequence):
     listFinal = list()
     listPartial = list()
     i = 0       
@@ -16,7 +16,7 @@ def recuperarsequences(sequence):
             #verifica se não possui nenhuma sequência no número
             if len(listPartial) == 0:
                 sequence = [str (i) for i in sequence]
-                return transformarString(sequence)            
+                return transformString(sequence)            
             break 
         #verifica se o numero atual e o próximo são 9 e 0 e fazem parte da sequência
         elif sequence[i] == 9 and sequence[i + 1] == 0:
@@ -63,30 +63,30 @@ def recuperarsequences(sequence):
                 listPartial.append(str(sequence[i]))                                   
             i = i + 1   
     #retorna a listFinal de números formatada para string                 
-    return transformarString(listFinal)
+    return transformString(listFinal)
 
 #retorna a maior sequência dentro do número passado
-def maiorsequence(sequence):
+def getLargestSequence(sequence):
     if not type(sequence) is int:
         print('por favor, digite somente números')
     else:
         #transforma o número passado em uma lista contendo os dígitos do número
         sequence =  [int (i) for i in str(sequence)]
         #retorna uma lista com as sequências do número        
-        sequences = [int (i) for i in recuperarsequences(sequence)]  
+        sequences = [int (i) for i in getSequences(sequence)]  
         #retorna a maior sequência                        
         print(max(sequences))
 
 def main():
     #casos teste
 
-    maiorsequence(53590)
-    maiorsequence(674030098567819)
-    maiorsequence(9012364509789)
-    maiorsequence('adadadadd')
-    maiorsequence(129458987)
-    maiorsequence(1239012390)
-    maiorsequence(859)
+    getLargestSequence(53590)
+    getLargestSequence(674030098567819)
+    getLargestSequence(9012364509789)
+    getLargestSequence('adadadadd')
+    getLargestSequence(129458987)
+    getLargestSequence(1239012390)
+    getLargestSequence(859)
 
 if __name__ == '__main__':
     main()
