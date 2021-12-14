@@ -79,13 +79,10 @@ def getLargestSequence(sequence):
 
 def main():
     #casos teste
-
     getLargestSequence(53590)
     getLargestSequence(674030098567819)
     getLargestSequence(9012364509789)
-    getLargestSequence('adadadadd')
-    getLargestSequence(129458987)
-    getLargestSequence(1239012390)
+    getLargestSequence('adadadadd')    
     getLargestSequence(859)
 
 if __name__ == '__main__':
